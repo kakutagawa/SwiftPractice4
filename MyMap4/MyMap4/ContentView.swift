@@ -9,9 +9,9 @@ import SwiftUI
 
 struct ContentView: View {
 
-    @State var inputText: String = ""
-    @State var displaySearchKey: String = ""
-    @State var displayMapType: MapType = .standard
+    @State private var inputText = ""
+    @State private var displaySearchKey = ""
+    @State private var displayMapType: MapType = .standard
 
     var body: some View {
         VStack {

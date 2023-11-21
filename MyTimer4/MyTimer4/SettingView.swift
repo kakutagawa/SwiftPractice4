@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct SettingView: View {
-    @AppStorage("timer_value") var timerValue = 10
+    @AppStorage("timer_value") private var timerValue = 10
 
     var body: some View {
         ZStack {

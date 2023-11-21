@@ -8,10 +8,10 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State var timerHandler : Timer?
-    @State var count = 0
-    @AppStorage("timer_value") var timerValue = 10
-    @State var showAlert = false
+    @State private var timerHandler : Timer?
+    @State private var count = 0
+    @AppStorage("timer_value") private var timerValue = 10
+    @State private var showAlert = false
 
     var body: some View {
         NavigationStack {

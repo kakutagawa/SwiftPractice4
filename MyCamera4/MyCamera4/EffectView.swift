@@ -10,8 +10,8 @@ import SwiftUI
 struct EffectView: View {
     @Binding var isShowSheet: Bool
     let captureImage: UIImage
-    @State var showImage: UIImage?
-    
+    @State private var showImage: UIImage?
+
     var body: some View {
         VStack {
             Spacer()
@@ -55,8 +55,8 @@ struct EffectView: View {
             }
             .padding()
 
-            if let showImage,
-               let shareImage = Image(uiImage: showImage) {
+            if let showImage {
+               let shareImage = Image(uiImage: captureImage) 
                 ShareLink(item: shareImage, subject: nil, message: nil,
                           preview: SharePreview("Photo", image: shareImage)) {
                     Text("シェア")

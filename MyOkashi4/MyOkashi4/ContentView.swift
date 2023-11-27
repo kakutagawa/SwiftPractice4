@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State private var okashiDataList = OkashiData()
+    @StateObject private var okashiDataList = OkashiData()
     @State private var inputText = ""
     @State private var showSafari = false
 

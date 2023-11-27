@@ -50,7 +50,7 @@ final class OkashiData: ObservableObject {
             let json = try decoder.decode(ResultJson.self, from: data)
 
             guard let items = json.item else { return }
-            self.okashiList.removeAll()
+            okashiList.removeAll()
 
             for item in items {
                 if let name = item.name,
